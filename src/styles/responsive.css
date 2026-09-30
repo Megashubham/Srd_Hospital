@@ -1,0 +1,54 @@
+/* Responsive Adjustments */
+
+@media (max-width: 1024px) {
+  section {
+    padding-block: var(--space-10);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 64px;
+  }
+
+  section {
+    padding-block: var(--space-8);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-6);
+  }
+  
+  .card {
+    padding: var(--space-5);
+  }
+}
+
+@media (max-width: 640px) {
+  /* Provide space at bottom for mobile floating action bar */
+  body {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 80px);
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  /* Special utilities for mobile */
+  .mobile-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.75rem; }
+  .section-header { margin-bottom: var(--space-5); }
+  .container { padding-inline: var(--space-4); }
+  
+  .card {
+    padding: var(--space-4);
+  }
+}

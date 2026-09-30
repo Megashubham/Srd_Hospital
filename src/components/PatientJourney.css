@@ -1,0 +1,85 @@
+.journey-section {
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  position: relative;
+}
+
+/* Connecting Line on Desktop */
+.journey-steps::before {
+  content: '';
+  position: absolute;
+  top: 32px; /* half of circle height */
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background-color: var(--border);
+  z-index: 0;
+}
+
+.journey-step {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-inline: var(--space-3);
+}
+
+.step-circle {
+  width: 64px;
+  height: 64px;
+  background-color: var(--surface);
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 auto var(--space-4);
+  box-shadow: 0 0 0 10px var(--surface); /* To cut out the line */
+}
+
+.step-title {
+  margin-bottom: var(--space-2);
+}
+
+.step-desc {
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 768px) {
+  .journey-steps {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .journey-steps::before {
+    left: 31px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    right: auto;
+  }
+  
+  .journey-step {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px; /* Space for the circle */
+  }
+  
+  .step-circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    box-shadow: 0 10px 0 0 var(--surface), 0 -10px 0 0 var(--surface);
+  }
+}

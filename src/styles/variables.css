@@ -1,0 +1,53 @@
+:root {
+  --primary: #0F766E;
+  --primary-dark: #115E59;
+  --secondary: #0F4C5C;
+  --accent: #F0FDF4;
+
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+
+  --text-primary: #102A43;
+  --text-secondary: #52606D;
+  --text-muted: #7B8794;
+  --text-inverse: #FFFFFF;
+
+  --border: #E5E7EB;
+  --border-hover: #D1D5DB;
+
+  --success: #15803D;
+  --error: #DC2626;
+
+  /* Typography */
+  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  --space-10: 64px;
+  --space-12: 80px;
+  --space-16: 96px;
+  --space-20: 120px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  
+  /* Layout */
+  --container-width: 1200px;
+  --container-width-lg: 1280px;
+  --navbar-height: 80px;
+}

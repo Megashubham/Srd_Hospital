@@ -1,0 +1,52 @@
+.mobile-action-bar {
+  display: none; /* Hidden by default on desktop */
+}
+
+@media (max-width: 640px) {
+  .mobile-action-bar {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--surface);
+    border-top: 1px solid var(--border);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-action-bar.visible {
+    transform: translateY(0);
+  }
+
+  .action-bar-container {
+    display: flex;
+    justify-content: space-around;
+    padding: var(--space-2) var(--space-4);
+  }
+
+  .action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: var(--space-2);
+    text-decoration: none;
+    flex: 1;
+  }
+
+  .action-btn:hover {
+    color: var(--primary);
+  }
+
+  .primary-action {
+    color: var(--primary);
+  }
+}
